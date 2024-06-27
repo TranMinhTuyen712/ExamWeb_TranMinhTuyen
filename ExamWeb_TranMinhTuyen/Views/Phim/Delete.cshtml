@@ -1,0 +1,32 @@
+﻿@model Phim
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <h2>Confirm to Delete Phim</h2>
+    <hr />
+    <div class="form-group">
+        <label>Tựa đề</label>
+        <input asp-for="TuaDe" disabled class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Diễn Viên</label>
+        <input asp-for="DienVien" class="form-control" />
+        <span asp-validation-for="DienVien" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Thể Loại</label>
+        <input asp-for="TrongNuoc" class="form-control" />
+        <span asp-validation-for="TrongNuoc" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Thời lượng</label>
+        <input asp-for="ThoiLuong" class="form-control" />
+        <span asp-validation-for="ThoiLuong" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Gía vé</label>
+        <input asp-for="GiaVe" class="form-control" />
+        <span asp-validation-for="GiaVe" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-danger"> Delete </button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>
